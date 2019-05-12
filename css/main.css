@@ -172,3 +172,16 @@ body {
     font-size: 40px;
     color: whitesmoke;
 }
+
+.winner {
+    background-image: url("../img/dice.gif");
+    background-size: cover;
+    /* height:5em; */
+}
+
+.winner-text {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    padding-left: 2%;
+    color: black;
+}
