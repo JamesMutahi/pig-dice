@@ -125,5 +125,45 @@ $(document).ready(function() {
             $("#input-details").modal();
         }
     });
-
+    $("#hold").click(function() {
+        if (num == 2) {
+            var getPlayerId = playerDetails[pos];
+            newMark = getPlayerId.playerMarks;
+            getPlayerId.Total(newMark);
+            finalScore = getPlayerId.totalScores;
+            console.log(finalScore);
+            //Make the total become 0;//Final score, This Round, Dice Value
+            getPlayerId.playerMarks = 0;
+            $("#content" + (pos + 1) + " h4").text("0");
+            $("#content" + (pos + 1) + " h1").text(finalScore);
+            $("#image-die").html("");
+            if (pos == 0) {
+                $("#content" + (pos + 1)).removeClass("player-turn");
+                pos = 1;
+                $("#content" + (pos + 1)).addClass("player-turn");
+            } else if (pos == 1) {
+                $("#content" + (pos + 1)).removeClass("player-turn");
+                pos = 0;
+                $("#content" + (pos + 1)).addClass("player-turn");
+            }
+            if (finalScore > 99) {
+                playerDetails[0].totalScores = 0;
+                playerDetails[1].totalScores = 0;
+                $(".winner-text").html("<h3 class = 'text-uppercase'>" + getPlayerId.playerNames + " HAS WON!!!</h3>")
+                $("#winner-modal").modal();
+                // alert(getPlayerId.playerNames + " has won!!");
+                $("#hold").hide();
+                $("#roll-dice").hide();
+                $("#reset").show();
+                $("#content1").removeClass("player-turn");
+                $("#content2").removeClass("player-turn");
+            }
+        } else if (num == 1) {
+            alert("Player 2 Name Required");
+            $("#input-details").modal();
+        } else if (num == 0) {
+            alert("Players' Names Required");
+            $("#input-details").modal();
+        }
+    });
 });
