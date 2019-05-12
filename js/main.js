@@ -65,4 +65,26 @@ $(document).ready(function() {
         $("#content1").addClass("player-turn");
         // console.log(finalScore);
     })
+    $("#player-names").submit(function(event) {
+        event.preventDefault();
+        num++;
+        if (num > 2) {
+            alert("Players cannot exceed 2!");
+            playerDetails = [];
+            num = 0;
+            console.log(playerDetails);
+            reset();
+        } else if (num == 2) {
+            $("#input-details").modal('hide');
+        }
+        var inputtedName = $("#name-player").val();
+        var newPlayer = new PlayersInfo(inputtedName, 0, 0);
+        playerDetails.push(newPlayer);
+        $("#content1").addClass("player-turn");
+        // console.log(playerDetails);
+        $("#content" + num + " h2").html("<span class=player" + num + ">" + newPlayer.playerNames + "</span>");
+
+        $("#name-player").val("");
+    });
+
 });
