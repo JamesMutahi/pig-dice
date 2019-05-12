@@ -1,3 +1,57 @@
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.img-fluid {
+    padding-right: 7pt;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.pig {
+    padding: 1%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #mdb-preloader {
     position: absolute;
     left: 50%;
@@ -69,4 +123,52 @@
 #myDiv {
     display: none;
     text-align: center;
+}
+
+.float-right {
+    margin-top: 3%;
+}
+
+.start {
+    margin-top: 2%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.row {
+    padding-top: 2%;
+}
+
+.total-font {
+    font-size: 70px;
+}
+
+.score-font {
+    font-size: 35px;
+}
+
+.min-score {
+    font-size: 25px;
+}
+
+.card .inner-card {
+    /* max-width: 20rem; */
+    align-self: center;
+    margin-bottom: 8%;
+    width: 45%;
+}
+
+.card {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+    /* background-color: transparent; */
+}
+
+.btn_play {
+    margin-top: 17%;
+}
+
+#image-die,
+.text-uppercase {
+    font-size: 40px;
+    color: whitesmoke;
 }
