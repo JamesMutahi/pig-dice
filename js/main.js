@@ -36,3 +36,23 @@ PlayersInfo.prototype.AddScores = function(thisMark) {
 PlayersInfo.prototype.Total = function(total) {
     return this.totalScores = this.totalScores + total;
 }
+var getDieSide = function(getInput) {
+    if (getInput == 1) diePic = "1";
+    else if (getInput == 2) diePic = "2";
+    else if (getInput == 3) diePic = "3";
+    else if (getInput == 4) diePic = "4";
+    else if (getInput == 5) diePic = "5";
+    else if (getInput == 6) diePic = "6";
+
+    return diePic;
+}
+
+function reset() {
+    pos = 0;
+    PlayersInfo.playerMarks = 0;
+    PlayersInfo.totalScores = 0;
+    $("#image-die").html("");
+    $("p.text-uppercase").text("");
+    $("h1").text("0");
+    $(".cumulative").text("");
+}
