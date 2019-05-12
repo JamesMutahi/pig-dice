@@ -56,3 +56,13 @@ function reset() {
     $("h1").text("0");
     $(".cumulative").text("");
 }
+
+$(document).ready(function() {
+    $("#reset").click(function() {
+        reset();
+        $("#hold").show();
+        $("#roll-dice").show();
+        $("#content1").addClass("player-turn");
+        // console.log(finalScore);
+    })
+});
