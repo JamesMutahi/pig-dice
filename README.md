@@ -24,7 +24,8 @@ Confirm successful submission | Submit | Assign names entered on form to card he
 * An alert message will appear to indicate a switch in turn
 
 There are no extra dependencies to be installed or databases and no other code that may be crucial to access this material.
-![PIG DICE](https://github.com/JamesMutahi/delani-studio/blob/master/IP3-master/%20Delani%20Studio.jpg)
+![PIG DICE](https://github.com/JamesMutahi/pig-dice/blob/master/images/Screenshot%20from%202019-05-13%2005-14-02.png)
+![PIG DICE](https://github.com/JamesMutahi/pig-dice/blob/master/images/Screenshot%20from%202019-05-13%2005-13-59.png)
 ## Known Bugs
 There are no known bugs. In case you do encounter any, please contact us on the deatils below.
 ## Technologies Used
