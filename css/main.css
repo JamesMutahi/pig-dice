@@ -185,3 +185,7 @@ body {
     padding-left: 2%;
     color: black;
 }
+
+.player-turn {
+    background-color: green;
+}
