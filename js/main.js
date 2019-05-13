@@ -13,7 +13,7 @@ var num = 0,
     newMark = 0,
     playerDetails = [],
     finalScore = 0,
-    diePic = "",
+    diceSide = "",
     pos = 0;
 
 function playerDetails(name, score, totalScore) {
@@ -37,14 +37,14 @@ playerDetails.prototype.Total = function(total) {
     return this.totalScores = this.totalScores + total;
 }
 var getDieSide = function(getInput) {
-    if (getInput == 1) diePic = "1";
-    else if (getInput == 2) diePic = "2";
-    else if (getInput == 3) diePic = "3";
-    else if (getInput == 4) diePic = "4";
-    else if (getInput == 5) diePic = "5";
-    else if (getInput == 6) diePic = "6";
+    if (getInput == 1) diceSide = "1";
+    else if (getInput == 2) diceSide = "2";
+    else if (getInput == 3) diceSide = "3";
+    else if (getInput == 4) diceSide = "4";
+    else if (getInput == 5) diceSide = "5";
+    else if (getInput == 6) diceSide = "6";
 
-    return diePic;
+    return diceSide;
 }
 
 function reset() {
@@ -63,7 +63,6 @@ $(document).ready(function() {
         $("#hold").show();
         $("#roll-dice").show();
         $("#content1").addClass("player-turn");
-        // console.log(finalScore);
     })
     $("#player-names").submit(function(event) {
         event.preventDefault();
