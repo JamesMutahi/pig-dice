@@ -16,7 +16,7 @@ var num = 0,
     diePic = "",
     pos = 0;
 
-function PlayersInfo(name, score, totalScore) {
+function playerDetails(name, score, totalScore) {
     this.playerNames = name;
     this.playerMarks = score;
     this.totalScores = totalScore;
@@ -25,7 +25,7 @@ var genRandom = function() {
     randomNo = Math.floor(Math.random() * 6) + 1;
     return randomNo;
 }
-PlayersInfo.prototype.AddScores = function(thisMark) {
+playerDetails.prototype.AddScores = function(thisMark) {
     if (thisMark === 1) {
         this.playerMarks = 0;
     } else if (thisMark !== 1) {
@@ -33,7 +33,7 @@ PlayersInfo.prototype.AddScores = function(thisMark) {
     }
     return this.playerMarks;
 }
-PlayersInfo.prototype.Total = function(total) {
+playerDetails.prototype.Total = function(total) {
     return this.totalScores = this.totalScores + total;
 }
 var getDieSide = function(getInput) {
@@ -49,8 +49,8 @@ var getDieSide = function(getInput) {
 
 function reset() {
     pos = 0;
-    PlayersInfo.playerMarks = 0;
-    PlayersInfo.totalScores = 0;
+    playerDetails.playerMarks = 0;
+    playerDetails.totalScores = 0;
     $("#image-die").html("");
     $("p.text-uppercase").text("");
     $("h1").text("0");
@@ -78,7 +78,7 @@ $(document).ready(function() {
             $("#input-details").modal('hide');
         }
         var inputtedName = $("#name-player").val();
-        var newPlayer = new PlayersInfo(inputtedName, 0, 0);
+        var newPlayer = new playerDetails(inputtedName, 0, 0);
         playerDetails.push(newPlayer);
         $("#content1").addClass("player-turn");
         // console.log(playerDetails);
