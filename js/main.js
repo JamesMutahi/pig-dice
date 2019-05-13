@@ -63,7 +63,6 @@ $(document).ready(function() {
         $("#hold").show();
         $("#roll-dice").show();
         $("#content1").addClass("player-turn");
-        // console.log(finalScore);
     })
     $("#player-names").submit(function(event) {
         event.preventDefault();
@@ -108,7 +107,6 @@ $(document).ready(function() {
                 pos = 0;
                 switchPlayer = playerDetails[pos];
                 $("p.text-uppercase").html("Oooops, You rolled a 1. <br>" + switchPlayer.playerNames + "'s turn");
-                // alert("Oooops, You rolled a 1. " + switchPlayer.playerNames + "'s turn");
                 $("#content" + (pos + 1)).addClass("player-turn");
             } else if (getRandom > 1) {
                 newMark = getPlayerId.playerMarks;
@@ -132,7 +130,6 @@ $(document).ready(function() {
             getPlayerId.Total(newMark);
             finalScore = getPlayerId.totalScores;
             console.log(finalScore);
-            //Make the total become 0;//Final score, This Round, Dice Value
             getPlayerId.playerMarks = 0;
             $("#content" + (pos + 1) + " h4").text("0");
             $("#content" + (pos + 1) + " h1").text(finalScore);
@@ -151,7 +148,6 @@ $(document).ready(function() {
                 playerDetails[1].totalScores = 0;
                 $(".winner-text").html("<h3 class = 'text-uppercase'>" + getPlayerId.playerNames + " HAS WON!!!</h3>")
                 $("#winner-modal").modal();
-                // alert(getPlayerId.playerNames + " has won!!");
                 $("#hold").hide();
                 $("#roll-dice").hide();
                 $("#reset").show();
